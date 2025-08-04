@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white font-sans">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galactic Getaways</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    .planet-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+    }
+
+    .blink-cursor {
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="px-4 sm:px-6 md:px-12 pt-10 max-w-screen-2xl mx-auto">
+
+  <!-- Header -->
+  <header class="relative w-full px-6 pt-1 pb-12 border-b border-gray-700">
+    <!-- Top Navigation -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <a href="index.html" class="text-2xl font-bold">GIBEL LIGHT</a>
+
+      <nav class="flex flex-wrap gap-3 text-sm sm:text-base">
+        <a href="galacticgetaways.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Galactic Getaways
+        </a>
+        <a href="cosmicbite.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Cosmic Bites
+        </a>
+        <a href="momentthatglow.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Moments That Glow
+        </a>
+        <a href="echodiaries.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Echo Diaries
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-4 text-sm">
+        <a href="html/about.html" class="hover:underline">About</a>
+        <a href="html/contact.html" class="hover:underline">Contact</a>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Live Location -->
+    <div class="mt-4 flex items-center space-x-2 text-sm font-medium">
+      <span class="animate-pulse text-purple-300">✶</span>
+      <span id="liveLocation" class="text-purple-200">Loading Edele’s signal…</span>
+      <span class="text-purple-400 blink-cursor">|</span>
+    </div>
+
+    <!-- Hero -->
+    <div class="text-center mt-12">
+      <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase leading-snug tracking-wide">
+        THEY SAY SPACE IS COLD.<br>
+        THEY HAVEN’T WALKED THROUGH<br>
+        THARUUN AT NIGHT.
+      </h2>
+      <p class="mt-4 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed text-gray-300">
+        From sky-glass oceans to memory-glow deserts, the planets of the Gibelverse aren’t just places — they’re
+        experiences.
+        This is where gravity feels gentle, colors don’t obey physics, and time sometimes slows just to let you
+        breathe.
+        These worlds don’t need conquering. Just witnessing. Come find your softest landing.
+      </p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="fixed top-1/2 left-4 transform -translate-y-1/2 z-50 flex flex-col items-center space-y-4">
+      <a href="https://instagram.com/yourhandle" target="_blank"
+        class="p-2 bg-black bg-opacity-40 rounded-full text-white hover:text-pink-400 hover:scale-110 transition">
+        <i class="fab fa-instagram text-2xl"></i>
+      </a>
+      <a href="https://twitter.com/yourhandle" target="_blank"
+        class="p-2 bg-black bg-opacity-40 rounded-full text-white hover:text-blue-400 hover:scale-110 transition">
+        <i class="fab fa-twitter text-2xl"></i>
+      </a>
+      <a href="mailto:youremail@example.com"
+        class="p-2 bg-black bg-opacity-40 rounded-full text-white hover:text-yellow-300 hover:scale-110 transition">
+        <i class="fas fa-envelope text-2xl"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Planet Grid -->
+  <section
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-6 px-2 sm:px-4 mb-12 mt-10">
+    <!-- Cards will be inserted via JS -->
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    const planets = [
+      { name: "Lunara", slug: "lunara", image: "../assets/planets/lunara.png" },
+      { name: "Arboris", slug: "arboris", image: "../assets/planets/arboris.png" },
+      { name: "Zephyra", slug: "zephyra", image: "../assets/planets/zephyra.png" },
+      { name: "Crescenta", slug: "crescenta", image: "../assets/planets/cresenta.png" },
+      { name: "Genezen Minor", slug: "genezen-minor", image: "../assets/planets/genezenminor.png" },
+      { name: "Tharuun", slug: "tharuun", image: "../assets/planets/thaaruun.png" },
+      { name: "Orris Prime", slug: "orris-prime", image: "../assets/planets/orrisprime.png" },
+      { name: "Sylphae", slug: "sylphae", image: "../assets/planets/slyphae.png" },
+      { name: "Hedra", slug: "hedra", image: "../assets/planets/hedra.png" },
+      { name: "Vesperis", slug: "vesperis", image: "../assets/planets/vesperis.png" },
+      { name: "Pyrrha", slug: "pyrrha", image: "../assets/planets/pyrrha.png" },
+      { name: "Marix", slug: "marix", image: "../assets/planets/maris.png" },
+      { name: "Eiros", slug: "eiros", image: "../assets/planets/eiros.png" },
+      { name: "Nebulus", slug: "nebulus", image: "../assets/planets/nebulus.png" },
+      { name: "Auriel's Rest", slug: "auriel-s-rest", image: "../assets/planets/aurielrest.png" }
+    ];
+
+    const section = document.querySelector("section.grid");
+
+    planets.forEach((planet, index) => {
+      const card = document.createElement("a");
+      card.href = `../html/planets/${planet.slug}.html`;
+      card.className = "planet-card relative border border-white/20 rounded-md overflow-hidden transform transition duration-300";
+      card.setAttribute("data-aos", "fade-up");
+      card.setAttribute("data-aos-delay", `${index * 50}`);
+
+      card.innerHTML = `
+        <img src="${planet.image}" alt="${planet.name}" class="w-full h-48 sm:h-52 md:h-56 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+          <h2 class="text-white text-lg sm:text-xl font-semibold tracking-wide text-center px-2">
+            ${planet.name.toUpperCase()}
+          </h2>
+        </div>
+      `;
+
+      section.appendChild(card);
+    });
+
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: 'ease-out',
+    });
+
+    const liveUpdates = [
+      "Edele is mapping constellations above Lunara’s bloomfields.",
+      "Edele is Currently enjoying moss tea under Tharuun’s glowing canopy.",
+      "Edele is Floating gently through Orris Prime’s sapphire caves.",
+      "Edele isWatching pollen auroras rise over Aurora Spires.",
+      "Edele is Swaying with softwater songs in Sylphae’s city-cascades.",
+      "Edele is Sketching nebula petals from a quiet perch on Hedra.",
+      "Edele is Napping inside a memory-well near the edge of Lunara.",
+      "Edele is Whispering to mossbirds in the shadow of Tharuun’s cliffs.",
+      "Edele is Weaving star threads with locals in Vesperis.",
+      "Edele is Drifting through soft-sun meadows on Auriel’s Rest.",
+      "Edele is Listening to root chants beneath Arboris’ ancient trees.",
+      "Edele is Riding mist-hawks over the violet peaks of Vesperis.",
+      "Edele is Sipping flower-sap cider in Bloomhold’s floating cafés.",
+      "Edele is Sketching ringlight reflections on the shores of Hedra.",
+      "Edele is Trading stories with pollenfishers near the Pollentide reefs.",
+      "Edele is Following echo lanterns down Tharuun’s mossy walkways.",
+      "Edele is Watching moon petals fall at the summit of Crescenta.",
+      "Edele is Collecting dreamstone shards on the quiet plains of Pyrrha.",
+      "Edele is Sharing silence with cloud monks high above Sylphae.",
+      "Edele is Wandering beneath biolava canopies during Glowfest Eve."
+    ];
+
+
+    const colors = [
+      "text-pink-200", "text-purple-200", "text-yellow-200", "text-green-200", "text-blue-200"
+    ];
+
+    function getRandomElement(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    const liveLocation = document.getElementById("liveLocation");
+
+    // Random message
+    const randomMessage = getRandomElement(liveUpdates);
+    liveLocation.textContent = randomMessage;
+
+    // Optional: Random pastel color for the vibe
+    const randomColor = getRandomElement(colors);
+    liveLocation.classList.add(randomColor);
+  </script>
+
+
+</body>
+
+</html>

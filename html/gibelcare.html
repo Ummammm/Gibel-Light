@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gibelcare - Travel With Tenderness</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animate On Scroll CDN -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Font Awesome CDN for icons -->
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap');
+    body {
+      font-family: 'Lexend', sans-serif;
+    }
+    .blink-cursor {
+      animation: blink 1s steps(2, start) infinite;
+    }
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+<body class="bg-black text-white px-6 py-12">
+
+  <!-- HEADER -->
+  <header class="relative w-full px-6 pt-1 pb-3 border-b border-gray-700">
+    <!-- Top Navigation -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <h1 class="text-2xl font-bold">GIBEL LIGHT</h1>
+
+      <nav class="flex flex-wrap gap-3 text-sm sm:text-base">
+        <a href="html/galacticgetaways.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Galactic Getaways
+        </a>
+        <a href="html/cosmicbite.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Cosmic Bites
+        </a>
+        <a href="html/momentthatglow.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Moments That Glow
+        </a>
+        <a href="html/echodiaries.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Echo Diaries
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-4 text-sm">
+        <a href="html/about.html" class="hover:underline">About</a>
+        <a href="html/contact.html" class="hover:underline">Contact</a>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Live Location -->
+    <div class="mt-4 flex items-center space-x-2 text-sm font-medium">
+      <span class="animate-pulse text-purple-300">✶</span>
+      <span id="liveLocation" class="text-purple-200">Loading Edele’s signal…</span>
+      <span class="text-purple-400 blink-cursor">|</span>
+    </div>
+
+    <!-- Social Sidebar -->
+    <div class="fixed top-1/2 left-4 transform -translate-y-1/2 z-50 flex flex-col items-center space-y-4">
+      <a href="https://instagram.com/yourhandle" target="_blank"
+        class="p-2 bg-black bg-opacity-40 rounded-full text-white hover:text-pink-400 hover:scale-110 transition">
+        <i class="fab fa-instagram text-2xl"></i>
+      </a>
+      <a href="https://twitter.com/yourhandle" target="_blank"
+        class="p-2 bg-black bg-opacity-40 rounded-full text-white hover:text-blue-400 hover:scale-110 transition">
+        <i class="fab fa-twitter text-2xl"></i>
+      </a>
+      <a href="mailto:youremail@example.com"
+        class="p-2 bg-black bg-opacity-40 rounded-full text-white hover:text-yellow-300 hover:scale-110 transition">
+        <i class="fas fa-envelope text-2xl"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE + INTRO -->
+  <section class=" pt-6 max-w-4xl mx-auto text-center justify-center md:text-left">
+    <h1 class="text-3xl md:text-4xl font-bold tracking-wider uppercase leading-tight">Gibelcare: Travel With <br class="hidden md:inline">Tenderness</h1>
+    <p class="text-sm text-gray-300 mt-4">These bundles aren’t just souvenirs — they’re quiet echoes of the places you’ve wandered...</p>
+    <p class="italic text-gray-400 text-sm mt-4">“Take something soft with you. Leave something lighter behind.”</p>
+  </section>
+
+  <!-- Trinkets Subheading -->
+  <h2 class="text-center text-xl font-bold tracking-wider uppercase mt-12 mb-6">Trinkets</h2>
+
+  <!-- Card Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+    <!-- Wallpapers -->
+    <a href="html/gibelcare/wallpapers.html" class="col-span-1 sm:col-span-2" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded">
+        <img src="../assets/wallpaper/echofern.png" alt="Wallpapers" class="w-full h-56 object-cover opacity-80 hover:opacity-100 transition duration-300">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="text-2xl font-bold uppercase text-white tracking-wide">Wallpapers</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Post Cards -->
+    <a href="html/gibelcare/postcards.html" class="col-span-1" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative overflow-hidden rounded">
+        <img src="../assets/postcard/lunarrailway.719Z.png" alt="Post Cards" class="w-full h-48 object-cover opacity-80 hover:opacity-100 transition duration-300">
+        <div class="absolute inset-0 flex items-center justify-center text-center">
+          <span class="text-xl font-bold uppercase text-white tracking-wide">Post<br>Cards</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Bookmarks -->
+    <a href="html/gibelcare/bookmarks.html" class="col-span-1" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative overflow-hidden rounded">
+        <img src="../assets/bookmark/glowinglyph.065Z.png" alt="Bookmarks" class="w-full h-48 object-cover opacity-80 hover:opacity-100 transition duration-300">
+        <div class="absolute inset-0 flex items-center justify-center text-center">
+          <span class="text-xl font-bold uppercase text-white tracking-wide">Book<br>Marks</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Prompt Cards -->
+    <a href="html/gibelcare/prompts.html" class="col-span-1 sm:col-span-2" data-aos="fade-up" data-aos-delay="300">
+      <div class="relative overflow-hidden rounded">
+        <img src="../assets/postcard/nightmarketlight.787Z.png" alt="Prompt Cards" class="w-full h-48 object-cover opacity-80 hover:opacity-100 transition duration-300">
+        <div class="absolute inset-0 flex items-center justify-center text-center">
+          <span class="text-xl font-bold uppercase text-white tracking-wide">Prompt Cards</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Digital Trinkets -->
+    <a href="html/gibelcare/digital-trinkets.html" class="col-span-1 sm:col-span-3" data-aos="fade-up" data-aos-delay="400">
+      <div class="relative overflow-hidden rounded">
+        <img src="../assets/trinket/starbonependant.487Z.png" alt="Digital Trinkets" class="w-full h-48 object-cover opacity-80 hover:opacity-100 transition duration-300">
+        <div class="absolute inset-0 flex items-center justify-center text-center">
+          <span class="text-xl font-bold uppercase text-white tracking-wide">Digital Trinkets</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- AOS Script Init -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+    });
+
+
+    const liveUpdates = [
+      "Edele is mapping constellations above Lunara’s bloomfields.",
+      "Edele is Currently enjoying moss tea under Tharuun’s glowing canopy.",
+      "Edele is Floating gently through Orris Prime’s sapphire caves.",
+      "Edele isWatching pollen auroras rise over Aurora Spires.",
+      "Edele is Swaying with softwater songs in Sylphae’s city-cascades.",
+      "Edele is Sketching nebula petals from a quiet perch on Hedra.",
+      "Edele is Napping inside a memory-well near the edge of Lunara.",
+      "Edele is Whispering to mossbirds in the shadow of Tharuun’s cliffs.",
+      "Edele is Weaving star threads with locals in Vesperis.",
+      "Edele is Drifting through soft-sun meadows on Auriel’s Rest.",
+      "Edele is Listening to root chants beneath Arboris’ ancient trees.",
+      "Edele is Riding mist-hawks over the violet peaks of Vesperis.",
+      "Edele is Sipping flower-sap cider in Bloomhold’s floating cafés.",
+      "Edele is Sketching ringlight reflections on the shores of Hedra.",
+      "Edele is Trading stories with pollenfishers near the Pollentide reefs.",
+      "Edele is Following echo lanterns down Tharuun’s mossy walkways.",
+      "Edele is Watching moon petals fall at the summit of Crescenta.",
+      "Edele is Collecting dreamstone shards on the quiet plains of Pyrrha.",
+      "Edele is Sharing silence with cloud monks high above Sylphae.",
+      "Edele is Wandering beneath biolava canopies during Glowfest Eve."
+    ];
+
+
+    const colors = [
+      "text-pink-200", "text-purple-200", "text-yellow-200", "text-green-200", "text-blue-200"
+    ];
+
+    function getRandomElement(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    const liveLocation = document.getElementById("liveLocation");
+
+    // Random message
+    const randomMessage = getRandomElement(liveUpdates);
+    liveLocation.textContent = randomMessage;
+
+    // Optional: Random pastel color for the vibe
+    const randomColor = getRandomElement(colors);
+    liveLocation.classList.add(randomColor);
+  </script>
+
+</body>
+</html>

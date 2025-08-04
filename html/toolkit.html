@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white font-sans">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traveler's Toolkit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .float-hover {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .float-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 20px rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="px-6 py-12 sm:px-10 md:px-16 lg:px-24">
+
+    <header class="text-center mb-12" data-aos="fade-down">
+        <!-- Top Navigation -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <a href="index.html" class="text-2xl font-bold">GIBEL LIGHT</h1>
+
+            <nav class="flex flex-wrap gap-3 text-sm sm:text-base">
+                <a href="html/galacticgetaways.html"
+                    class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+                    Galactic Getaways
+                </a>
+                <a href="html/cosmicbite.html"
+                    class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+                    Cosmic Bites
+                </a>
+                <a href="html/momentthatglow.html"
+                    class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+                    Moments That Glow
+                </a>
+                <a href="html/echodiaries.html"
+                    class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+                    Echo Diaries
+                </a>
+            </nav>
+
+            <div class="flex items-center gap-4 text-sm">
+                <a href="html/about.html" class="hover:underline">About</a>
+                <a href="html/contact.html" class="hover:underline">Contact</a>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Live Location -->
+        <div class="mt-4 flex items-center space-x-2 text-sm font-medium">
+            <span class="animate-pulse text-purple-300">✶</span>
+            <span id="liveLocation" class="text-purple-200">Loading Edele’s signal…</span>
+            <span class="text-purple-400 blink-cursor">|</span>
+        </div>
+
+
+        <h1 class="text-4xl font-bold mb-2">Traveler’s Toolkit</h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">Fifteen tools of wonder, comfort, and curiosity — gathered
+            from every edge of the Gibelverse.</p>
+    </header>
+
+    <section class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Toolkit cards start here -->
+
+        <!-- 1. Threaded Compass -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="0">
+            <img src="../assets/toolkit/toolkit1.092Z.png" alt="Threaded Compass"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Threaded Compass</h3>
+            <p class="text-sm text-gray-400 mt-1">Points not to north, but to whatever you're quietly longing for. Pull
+                the string to reset.</p>
+        </div>
+
+        <!-- 2. Pocket Mycogarden -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="100">
+            <img src="../assets/toolkit/toolkit2.945Z.png" alt="Pocket Mycogarden"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Pocket Mycogarden</h3>
+            <p class="text-sm text-gray-400 mt-1">A tiny moss-and-mushroom capsule that hums when near life. Great for
+                calming nerves or finding forest paths.</p>
+        </div>
+
+        <!-- 3. Echo Tuner -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="200">
+            <img src="../assets/toolkit/toolkit3.877Z.png" alt="Echo Tuner"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Echo Tuner</h3>
+            <p class="text-sm text-gray-400 mt-1">Looks like a stone ring, lets you hear what the place remembers —
+                laughter, wind, old songs. Used with care.</p>
+        </div>
+
+        <!-- 4. Rainbreath Cloak -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="300">
+            <img src="../assets/toolkit/toolkit4.349Z.png" alt="Rainbreath Cloak"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Rainbreath Cloak</h3>
+            <p class="text-sm text-gray-400 mt-1">Made from woven plant threads of Sylphae. Light as fog, always dry on
+                the inside. Smells faintly like petrichor.</p>
+        </div>
+
+        <!-- 5. Starwater Flask -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="400">
+            <img src="../assets/toolkit/toolkit5.077Z.png" alt="Starwater Flask"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Starwater Flask</h3>
+            <p class="text-sm text-gray-400 mt-1">Catches the first dew under planetary moonlight. Restores energy when
+                sipped slowly with a wish.</p>
+        </div>
+
+        <!-- 6. Footfall Listening -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="500">
+            <img src="../assets/toolkit/toolkit6.998Z.png" alt="Footfall Listening"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Footfall Listening</h3>
+            <p class="text-sm text-gray-400 mt-1">Walk in silence for 12 steps each morning. Let the rhythm tell you
+                what kind of day it is.</p>
+        </div>
+
+        <!-- 7. One Beautiful Thing Rule -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="600">
+            <img src="../assets/toolkit/toolkit7.654Z.png" alt="One Beautiful Thing Rule"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">One Beautiful Thing Rule</h3>
+            <p class="text-sm text-gray-400 mt-1">Each planet, each stop — find and name one beautiful thing out loud.
+                You don’t have to explain it. Just notice.</p>
+        </div>
+
+        <!-- 8. Softstep Offering -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="700">
+            <img src="../assets/toolkit/toolkit8.310Z.png" alt="Softstep Offering"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Softstep Offering</h3>
+            <p class="text-sm text-gray-400 mt-1">Leave a petal, stone, or word behind when you exit a sacred place.
+                Thank it with something real.</p>
+        </div>
+
+        <!-- 9. Night Notes -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="800">
+            <img src="../assets/toolkit/toolkit9.219Z.png" alt="Night Notes"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Night Notes</h3>
+            <p class="text-sm text-gray-400 mt-1">At twilight, whisper what you learned into your hands. The wind will
+                carry it where it’s needed.</p>
+        </div>
+
+        <!-- 10. Multi-Climate Wrap -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="900">
+            <img src="../assets/toolkit/toolkit10.815Z.png" alt="Multi-Climate Wrap"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Multi-Climate Wrap</h3>
+            <p class="text-sm text-gray-400 mt-1">Shape-shifts between scarf, blanket, or shade-cloak. Breathable in
+                fire, cozy in frost.</p>
+        </div>
+
+        <!-- 11. Universal Translation Pin -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="1000">
+            <img src="../assets/toolkit/toolkit11.760Z.png" alt="Universal Translation Pin"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Universal Translation Pin</h3>
+            <p class="text-sm text-gray-400 mt-1">Whispers words in your ear. Has a sense of humor. Once translated a
+                frog’s insult.</p>
+        </div>
+
+        <!-- 12. Gravity-Balanced Boots -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="1100">
+            <img src="../assets/toolkit/toolkit12.473Z.png" alt="Gravity-Balanced Boots"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Gravity-Balanced Boots</h3>
+            <p class="text-sm text-gray-400 mt-1">Adjust to local pull so you don’t float off or sink in. Made in
+                Tharuun, obviously.</p>
+        </div>
+
+        <!-- 13. Mirth Crystals -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="1200">
+            <img src="../assets/toolkit/toolkit13.741Z.png" alt="Mirth Crystals"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Mirth Crystals</h3>
+            <p class="text-sm text-gray-400 mt-1">Tiny laughter-charged crystals mined from Vesperis caverns. Used to
+                light lanterns or lift moods.</p>
+        </div>
+
+        <!-- 14. Echo Mender Pouch -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="1300">
+            <img src="../assets/toolkit/toolkit14.775Z.png" alt="Echo Mender Pouch"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Echo Mender Pouch</h3>
+            <p class="text-sm text-gray-400 mt-1">Filled with thread spun from lullabies. Used to stitch torn cloaks,
+                old griefs, or broken silences.</p>
+        </div>
+
+        <!-- 15. Dandelune Journal -->
+        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg p-4 float-hover" data-aos="fade-up"
+            data-aos-delay="1400">
+            <img src="../assets/toolkit/toolkit15.634Z.png" alt="Dandelune Ink & Leafpress Journal"
+                class="rounded-md mb-3 w-full h-48 object-cover" />
+            <h3 class="text-lg font-bold">Dandelune Journal</h3>
+            <p class="text-sm text-gray-400 mt-1">Writes only at night. Pages softly glow. Will sketch dreams on its own
+                if you fall asleep holding it.</p>
+        </div>
+    </section>
+
+    <script>
+        AOS.init({
+            once: true,
+            duration: 700,
+            easing: 'ease-out-cubic',
+        });
+
+        const liveUpdates = [
+            "Edele is mapping constellations above Lunara’s bloomfields.",
+            "Edele is Currently enjoying moss tea under Tharuun’s glowing canopy.",
+            "Edele is Floating gently through Orris Prime’s sapphire caves.",
+            "Edele isWatching pollen auroras rise over Aurora Spires.",
+            "Edele is Swaying with softwater songs in Sylphae’s city-cascades.",
+            "Edele is Sketching nebula petals from a quiet perch on Hedra.",
+            "Edele is Napping inside a memory-well near the edge of Lunara.",
+            "Edele is Whispering to mossbirds in the shadow of Tharuun’s cliffs.",
+            "Edele is Weaving star threads with locals in Vesperis.",
+            "Edele is Drifting through soft-sun meadows on Auriel’s Rest.",
+            "Edele is Listening to root chants beneath Arboris’ ancient trees.",
+            "Edele is Riding mist-hawks over the violet peaks of Vesperis.",
+            "Edele is Sipping flower-sap cider in Bloomhold’s floating cafés.",
+            "Edele is Sketching ringlight reflections on the shores of Hedra.",
+            "Edele is Trading stories with pollenfishers near the Pollentide reefs.",
+            "Edele is Following echo lanterns down Tharuun’s mossy walkways.",
+            "Edele is Watching moon petals fall at the summit of Crescenta.",
+            "Edele is Collecting dreamstone shards on the quiet plains of Pyrrha.",
+            "Edele is Sharing silence with cloud monks high above Sylphae.",
+            "Edele is Wandering beneath biolava canopies during Glowfest Eve."
+        ];
+
+
+        const colors = [
+            "text-pink-200", "text-purple-200", "text-yellow-200", "text-green-200", "text-blue-200"
+        ];
+
+        function getRandomElement(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        const liveLocation = document.getElementById("liveLocation");
+
+        // Random message
+        const randomMessage = getRandomElement(liveUpdates);
+        liveLocation.textContent = randomMessage;
+
+        // Optional: Random pastel color for the vibe
+        const randomColor = getRandomElement(colors);
+        liveLocation.classList.add(randomColor);
+    </script>
+</body>
+
+</html>

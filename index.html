@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gibel Light</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .bg-ivory {
+            background-color: #fffff0;
+            /* ivory white */
+        }
+
+        .text-ivory {
+            color: #fffff0;
+        }
+
+        .border-ivory {
+            border-color: #fffff0;
+        }
+
+        .blink-cursor {
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="flex items-center justify-between p-6 border-b border-gray-700">
+        <a href="index.html" class="text-2xl font-bold">GIBEL LIGHT</a>
+        <div class="">
+            <a href="html/galacticgateaways.html"
+                class="bg-transparent border border-ivory rounded-full px-6 py-2 inline-flex space-x-6 text-white  hover:bg-white hover:text-black transition duration-300">Galactic
+                Getaways</a>
+            <a href="html/cosmicbite.html"
+                class="bg-transparent border border-ivory rounded-full px-6 py-2 inline-flex space-x-6 text-white  hover:bg-white hover:text-black transition duration-300">Cosmic
+                Bites</a>
+            <a href="html/momentthatglow.html"
+                class="bg-transparent border border-ivory rounded-full px-6 py-2 inline-flex space-x-6 text-white  hover:bg-white hover:text-black transition duration-300">Moments
+                That Glow</a>
+            <a href="html/echodiaries.html"
+                class="bg-transparent border border-ivory rounded-full px-6 py-2 inline-flex space-x-6 text-white  hover:bg-white hover:text-black transition duration-300">Echo
+                Diaries</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="html/about.html" class="hover:underline">About</a>
+            <a href="html/contact.html" class="hover:underline">Contact</a>
+            <button><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+                </svg></button>
+        </div>
+    </header>
+
+    <!-- Live Location Box -->
+    <div class="mt-4 px-6">
+        <div class="flex items-center space-x-2 text-sm font-medium">
+            <span class="animate-pulse text-purple-300">✶</span>
+            <span id="liveLocation" class="text-purple-200">Loading Edele’s signal…</span>
+            <span class="text-purple-400 blink-cursor">|</span>
+        </div>
+    </div>
+
+    <!-- Floating Social Media Buttons (Vertical Stack) -->
+    <div class="fixed top-1/2 left-4 transform -translate-y-1/2 z-50 flex flex-col items-center space-y-4">
+        <!-- Instagram -->
+        <a href="https://instagram.com/yourhandle" target="_blank"
+            class="p-2 bg-black bg-opacity-40 rounded-full text-white hover:text-pink-400 hover:scale-110 transition">
+            <i class="fab fa-instagram text-2xl"></i>
+        </a>
+
+        <!-- Twitter/X -->
+        <a href="https://twitter.com/yourhandle" target="_blank"
+            class="p-2 bg-black bg-opacity-40 rounded-full text-white hover:text-blue-400 hover:scale-110 transition">
+            <i class="fab fa-twitter text-2xl"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:youremail@example.com"
+            class="p-2 bg-black bg-opacity-40 rounded-full text-white hover:text-yellow-300 hover:scale-110 transition">
+            <i class="fas fa-envelope text-2xl"></i>
+        </a>
+    </div>
+
+
+
+    <!-- Hero Section -->
+    <section class="text-center px-6 py-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">COME FOR THE GALAXIES,<br>STAY FOR THE DUMPLINGS.</h2>
+        <p class="max-w-2xl mx-auto text-gray-400 text-lg mb-6">
+            From Fiery Planet, Lush Planet, Awe-Inspiring Capital World. Take a look at Experiences across billion users
+            around Milky Way. Whether they’re people or not.
+        </p>
+        <blockquote class="italic text-sm text-gray-500 mb-2">
+            "Yes, the galaxy is falling apart. But also… have you seen Lunara at sunset?"
+        </blockquote>
+        <p class="text-xs text-gray-600">16 MARCH 7000</p>
+    </section>
+
+    <!-- Image Grid Section -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-2 px-6">
+        <img src="assets/planets/arboris.png" class="w-full h-64 object-cover col-span-1 md:col-span-2"
+            alt="Highlight 1">
+        <div class="grid grid-cols-2 md:grid-cols-2 gap-2">
+            <img src="assets/planets/aurielrest.png" class="w-full h-32 object-cover" alt="Highlight 2">
+            <img src="assets/planets/genezenminor.png" class="w-full h-32 object-cover" alt="Highlight 3">
+            <img src="assets/planets/lunara.png" class="w-full h-32 object-cover" alt="Highlight 4">
+            <img src="assets/planets/orrisprime.png" class="w-full h-32 object-cover" alt="Highlight 5">
+        </div>
+    </section>
+
+    <!-- Explore Planets Section -->
+    <section class="mt-12 px-6">
+        <div class="relative w-full h-72 overflow-hidden rounded-md group cursor-pointer border border-ivory">
+            <img src="assets/planets/maris.png"
+                class="absolute inset-0 w-full h-full object-cover transition duration-500 transform group-hover:scale-105 group-hover:opacity-60"
+                alt="Explore Planets" />
+        </div>
+    </section>
+
+    <!-- Events & Places Grid -->
+    <section class="px-6 mt-12">
+        <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-ivory">EXQUISITE EVENTS & PLACES.</h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-4">
+            <a href="html/cities&restaurant/vesper-isles.html"
+                class="block border border-ivory bg-gray-800 p-4 rounded-md transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                <img src="assets/cities/vesperisle.png" alt="Vesper Isles"
+                    class="w-full h-40 object-cover rounded-md mb-2">
+                <h4 class="text-center font-semibold text-white">Vesper Isles</h4>
+                <p class="text-center text-sm text-gray-400">City</p>
+            </a>
+
+            <a href="html/events/skyfall-gala.html"
+                class="block border border-ivory bg-gray-800 p-4 rounded-md transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                <img src="assets/events/skyfallgala.png" alt="Skyfall Gala"
+                    class="w-full h-40 object-cover rounded-md mb-2">
+                <h4 class="text-center font-semibold text-white">Skyfall Gala</h4>
+                <p class="text-center text-sm text-gray-400">Event</p>
+            </a>
+
+            <a href="html/cities&restaurant/reefside-bites.html"
+                class="block border border-ivory bg-gray-800 p-4 rounded-md transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                <img src="assets/restaurant/reefsidebeef.png" alt="Reefside Bites"
+                    class="w-full h-40 object-cover rounded-md mb-2">
+                <h4 class="text-center font-semibold text-white">Reefside Bites</h4>
+                <p class="text-center text-sm text-gray-400">Restaurant</p>
+            </a>
+
+        </div>
+    </section>
+
+
+
+    <!-- Toolkit & Gibelcare Section -->
+    <section class="px-6 mt-12 pb-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            <!-- Traveler Toolkit -->
+            <div
+                class="relative border border-ivory rounded-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg cursor-pointer">
+                <img src="assets/toolkit/toolkit1.092Z.png" class="w-full h-48 object-cover rounded-md"
+                    alt="Traveler Toolkit">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center rounded-md">
+                    <a href="html/toolkit.html" class="font-semibold text-xl text-white">MY TRAVELER'S
+                        TOOLKIT</a>
+                </div>
+            </div>
+
+            <!-- Gibelcare -->
+            <div
+                class="relative border border-ivory rounded-md overflow-hidden transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-lg cursor-pointer">
+                <img src="assets/postcard/hollowlight.png" class="w-full h-48 object-cover rounded-md"
+                    alt="Gibelcare">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center rounded-md">
+                    <a href="html/gibelcare.html" class="font-semibold text-xl text-white">GIBELCARE</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script>
+        const liveUpdates = [
+            "Edele is mapping constellations above Lunara’s bloomfields.",
+            "Edele is Currently enjoying moss tea under Tharuun’s glowing canopy.",
+            "Edele is Floating gently through Orris Prime’s sapphire caves.",
+            "Edele isWatching pollen auroras rise over Aurora Spires.",
+            "Edele is Swaying with softwater songs in Sylphae’s city-cascades.",
+            "Edele is Sketching nebula petals from a quiet perch on Hedra.",
+            "Edele is Napping inside a memory-well near the edge of Lunara.",
+            "Edele is Whispering to mossbirds in the shadow of Tharuun’s cliffs.",
+            "Edele is Weaving star threads with locals in Vesperis.",
+            "Edele is Drifting through soft-sun meadows on Auriel’s Rest.",
+            "Edele is Listening to root chants beneath Arboris’ ancient trees.",
+            "Edele is Riding mist-hawks over the violet peaks of Vesperis.",
+            "Edele is Sipping flower-sap cider in Bloomhold’s floating cafés.",
+            "Edele is Sketching ringlight reflections on the shores of Hedra.",
+            "Edele is Trading stories with pollenfishers near the Pollentide reefs.",
+            "Edele is Following echo lanterns down Tharuun’s mossy walkways.",
+            "Edele is Watching moon petals fall at the summit of Crescenta.",
+            "Edele is Collecting dreamstone shards on the quiet plains of Pyrrha.",
+            "Edele is Sharing silence with cloud monks high above Sylphae.",
+            "Edele is Wandering beneath biolava canopies during Glowfest Eve."
+        ];
+
+
+        const colors = [
+            "text-pink-200", "text-purple-200", "text-yellow-200", "text-green-200", "text-blue-200"
+        ];
+
+        function getRandomElement(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        const liveLocation = document.getElementById("liveLocation");
+
+        // Random message
+        const randomMessage = getRandomElement(liveUpdates);
+        liveLocation.textContent = randomMessage;
+
+        // Optional: Random pastel color for the vibe
+        const randomColor = getRandomElement(colors);
+        liveLocation.classList.add(randomColor);
+    </script>
+
+
+</body>
+
+</html>

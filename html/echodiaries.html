@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echo Diaries – Gibel Light</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Lexend', sans-serif;
+      background-color: #1A1A1A;
+      color: white;
+    }
+
+    .diary-card {
+      transition: transform 0.3s ease;
+    }
+
+    .diary-card:hover {
+      transform: translateY(-4px);
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.6s ease-out both;
+    }
+
+    .echo-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .echo-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1);
+    }
+
+    .echo-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      opacity: 0;
+      backdrop-filter: blur(3px);
+      transition: opacity 0.3s ease;
+    }
+
+    .echo-card:hover .echo-overlay {
+      opacity: 1;
+    }
+
+    .echo-caption {
+      color: white;
+      font-size: 0.875rem;
+      padding: 1rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+
+    .echo-card:hover .echo-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen px-4 sm:px-8 md:px-16 py-10">
+
+  <!-- NAV -->
+  <header class="relative w-full px-6 pt-1 pb-6 border-b border-gray-700">
+
+    <!-- Navigation -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <a href="index.html" class="text-2xl font-bold">GIBEL LIGHT</a>
+
+      <nav class="flex flex-wrap gap-3 text-sm sm:text-base">
+        <a href="galacticgateaways.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Galactic Getaways
+        </a>
+        <a href="cosmicbite.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Cosmic Bites
+        </a>
+        <a href="momentthatglow.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Moments That Glow
+        </a>
+        <a href="echodiaries.html"
+          class="bg-transparent border border-ivory rounded-full px-6 py-2 text-white hover:bg-white hover:text-black transition duration-300">
+          Echo Diaries
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-4 text-sm">
+        <a href="html/about.html" class="hover:underline">About</a>
+        <a href="html/contact.html" class="hover:underline">Contact</a>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    </div>
+  </header>
+
+
+  <!-- Intro Text -->
+  <section class="p-3 max-w-2xl mx-auto text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold tracking-wide leading-snug uppercase mb-4">
+      Some memories don’t fade.<br>They echo across worlds.
+    </h2>
+    <p class="text-sm text-white/80 mb-6">
+      Welcome to Echo Diaries, where every story is a soulprint, personal, raw, and gently cosmic.
+      These are the footprints I leave behind and the ones we follow, etched in stardust, city lights,
+      and quiet conversations with the strange and the beautiful.
+    </p>
+    <p class="text-sm text-white/80 mb-6">
+      Each entry is a window into a lived moment — a stranger’s kindness, a first glimpse of a twin sun,
+      the hush of a moss-lit forest.
+    </p>
+    <p class="text-sm text-white/80 mb-10">
+      Read slowly. Feel deeply. You might just find your own story in the echoes.
+    </p>
+  </section>
+
+  <!-- Echo Cards -->
+  <section class="grid grid-cols-1 gap-6 max-w-2xl mx-auto">
+    <!-- Use this to repeat for each entry -->
+    <!-- Entry Template -->
+    <a href="echo/echo1.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="100">
+      <img src="../assets/diaries/diaries1.852Z.png" alt="Moss & Ember fire circle"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          I found peace in a Moss & Ember fire circle</div>
+      </div>
+    </a>
+
+    <a href="echo/echo2.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="150">
+      <img src="../assets/diaries/preview/preview2.225Z.png" alt="Memory tea in Lunara"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Drank memory-tea in Lunara — I remembered my first home.</div>
+      </div>
+    </a>
+
+    <a href="echo/echo3.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="200">
+      <img src="../assets/diaries/preview/preview3.714Z.png" alt="Surf glowing waves"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          I learned to surf the glowing waves of Genezen Minor</div>
+      </div>
+    </a>
+
+    <a href="echo/echo4.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="250">
+      <img src="../assets/diaries/preview/preview4.255Z.png" alt="Drone in Hedra"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          An orchid-petal drone serenaded me in Hedra</div>
+      </div>
+    </a>
+
+    <a href="echo/echo5.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="300">
+      <img src="../assets/diaries/preview/preview5.744Z.png" alt="Whispering with Arboris trees"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          I whispered with the Arboris trees at dawn</div>
+      </div>
+    </a>
+
+    <a href="echo/echo6.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="350">
+      <img src="../assets/diaries/preview/preview16.319Z.png" alt="Crystal cave Orris Prime"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Caught an aurora reflection in a crystal cave on Orris Prime</div>
+      </div>
+    </a>
+
+    <a href="echo/echo7.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="400">
+      <img src="../assets/diaries/preview/preview7.275Z.png" alt="Camping Pyrrha"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          I tent-camped by a biolava pond on Pyrrha</div>
+      </div>
+    </a>
+
+    <a href="echo/echo8.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="450">
+      <img src="../assets/diaries/preview/preview8.589Z.png" alt="Coral Mirage in Marix"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Saw my name etched in a Coral Mirage in Marix</div>
+      </div>
+    </a>
+
+    <a href="echo/echo9.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="500">
+      <img src="../assets/diaries/preview/preview9].922Z.png" alt="Water maze Sylphae"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Got lost in a Cloudfall Day water-maze</div>
+      </div>
+    </a>
+
+    <a href="echo/echo10.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="550">
+      <img src="../assets/diaries/preview/preview10.750Z.png" alt="Moon-beam tea"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Tasted moon-beam tea in Crescenta’s midnight cafe</div>
+      </div>
+    </a>
+    <a href="echo/echo11.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="600">
+      <img src="../assets/diaries/preview/preview11.874Z.png" alt="Ring dance in Hedra"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Joined a ring-dance under floating gardens at Hedra</div>
+      </div>
+    </a>
+
+    <a href="echo/echo12.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="650">
+      <img src="../assets/diaries/preview/preview12.550Z.png" alt="Meal with AI bard"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Shared a meal with an AI bard in Nebulus</div>
+      </div>
+    </a>
+
+    <a href="echo/echo13.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="700">
+      <img src="../assets/diaries/preview/preview13.208Z.png" alt="Memory well in Lunara"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Wrote a letter inside a memory-well and left it in Lunara</div>
+      </div>
+    </a>
+
+    <a href="echo/echo14.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="750">
+      <img src="../assets/diaries/preview/preview14.972Z.png" alt="Pollen lanterns"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Chased pollen-lanterns during Sapling Seedfall</div>
+      </div>
+    </a>
+
+    <a href="echo/echo15.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="800">
+      <img src="../assets/diaries/preview/preview15.460Z.png" alt="Biocloud gondola in Vesper Isles"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Drifted above Vesper Isles on a biocloud gondola</div>
+      </div>
+    </a>
+
+    <a href="echo/echo16.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="850">
+      <img src="../assets/diaries/preview/preview16.319Z.png" alt="Humming sand in Eiros"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Heard the sand hum as a song in Eiros</div>
+      </div>
+    </a>
+
+    <a href="echo/echo17.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="900">
+      <img src="../assets/diaries/preview/preview17.916Z.png" alt="Wind-Harvest in Zephyra"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Practiced wind-harvest crafts in Zephyra’s fair</div>
+      </div>
+    </a>
+
+    <a href="echo/echo18.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="950">
+      <img src="../assets/diaries/preview/preview18.978Z.png" alt="Crystal Bloom ceremony"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Watched the Crystal Sky Bloom ceremony—brought tears</div>
+      </div>
+    </a>
+
+    <a href="echo/echo19.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="1000">
+      <img src="../assets/diaries/preview/preview19.528Z.png" alt="Whisper Cantina memory songs"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          My heart calmed at the Whisper Cantina’s memory-songs</div>
+      </div>
+    </a>
+
+    <a href="echo/echo20.html"
+      class="relative block border border-white/20 rounded-lg overflow-hidden echo-card" data-aos="fade-up"
+      data-aos-delay="1050">
+      <img src="../assets/diaries/preview/preview20.218Z.png" alt="Healing circle Aurora Spires"
+        class="w-full h-48 object-cover">
+      <div class="echo-overlay">
+        <div
+          class="echo-caption text-2xl font-bold absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white text-center text-sm px-4">
+          Joined a healing circle in Aurora Spires under pollen rain</div>
+      </div>
+    </a>
+
+
+    <!-- Repeat entries 3 to 20 the same way -->
+
+  </section>
+
+</body>
+<script>
+  AOS.init({
+    once: true,
+    duration: 800,
+    easing: 'ease-out'
+  });
+</script>
+
+</html>
